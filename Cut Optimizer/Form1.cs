@@ -9,5 +9,11 @@ namespace Cut_Optimizer
             MessageBox.Show(g.ToString());
                 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Polygon polygon = new Polygon();
+            MessageBox.Show(polygon.determinatePolygonArea().ToString()); 
+        }
     }
 }

@@ -1,10 +1,25 @@
 ﻿using System;
+using System.Diagnostics.Metrics;
+using System.Reflection.Metadata;
+using System.Runtime.InteropServices;
+using static System.Windows.Forms.DataFormats;
+
 namespace Cut_Optimizer
 {
 
     public class PolygonEngine
     {
         private List<Polygon> polygons;
+        private Polygon sheetFormat;
+        private void FS()
+        {
+            double lenghtA;
+
+            foreach (var polygon in polygons) 
+            {
+
+            }
+        }
         
     }
     public struct PolygonPoint
@@ -66,9 +81,81 @@ namespace Cut_Optimizer
             
             
         }
-        private double determinateArea()
+        public void OffsetPolygon()
+        { 
+        }
+        public double determinateThreePointPolygonArea()
         {
-            return 0d;
+            //double[,] doubles = new double[,] {
+            //    {0,           57.52922972, 1 },
+            //    {27.5199921,  18.53104996, 1 },
+            //    {91.41062703, 57.52922972, 1 },                
+            //};
+            double[,] doubles = new double[,] {
+                {3,   3 },
+                {-5,  -2 }                
+            };
+            double determinant = 0;
+            double area = 0;
+            int lenght = doubles.GetLength(1);
+            for (int i = 0; i < lenght; i++) 
+            {
+                double multiplication = 1;
+                double multiplicationMinus = 1;
+                for (int j = 0; j < lenght; j++)
+                {
+                    int _i = j + i;
+                    int _iMinus = lenght - (j + i) - 1;
+                    if (_i > lenght - 1)
+                    {
+                        _i = i;
+                        _iMinus = lenght - i - 1;
+                    }                    
+                    multiplication *= doubles[_i, j];
+                    multiplicationMinus*= doubles[_iMinus, j];
+                }
+                determinant += multiplication;
+                determinant -= multiplicationMinus;
+            }
+
+            area = determinant / 2;
+
+            return area;
+        }
+        public double determinatePolygonArea() 
+        {
+            double[,] doubles = new double[,] {
+                {0,   57.52922972 },
+                {83.55985646,  73.62245796 },
+                {91.41062703,  57.52922972 },
+                {27.5199921,  18.53104996 }
+            };
+            double determinant = 0;
+            double area = 0;
+            int lenght = doubles.GetLength(0);
+            for (int i = 0; i < lenght; i++)
+            {
+                double multipler = 1;
+                double multiplrtMinus = 1;
+                for (int j = 0; j < 2; j++)
+                {
+                    int iP = i + j;
+                    
+                    if (iP > lenght - 1)
+                    {
+                        iP = i - (lenght - 1);
+                    }
+                    
+                    multipler *= doubles[iP, j];
+                    multiplrtMinus *= doubles[iP, 1 - j];                    
+                }
+                determinant += multipler;
+                determinant -= multiplrtMinus;                
+            }
+
+            area = determinant / 2;
+
+            return area;            
         }
         private void createBox()
         {
@@ -92,6 +179,9 @@ namespace Cut_Optimizer
 
 
         }
+        
+
+
     }
 }
 
