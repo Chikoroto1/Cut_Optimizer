@@ -179,7 +179,15 @@ namespace Cut_Optimizer
 
 
         }
-        
+        private double internalAngle(PolygonPoint firstPolygonPoint, PolygonPoint secondPolygonPoint)
+        {
+            double aV = Math.Sqrt(Math.Pow(firstPolygonPoint.X, 2) + Math.Pow(firstPolygonPoint.Y, 2));
+            double bV = Math.Sqrt(Math.Pow(secondPolygonPoint.X, 2) + Math.Pow(secondPolygonPoint.Y, 2));
+            double scalar = firstPolygonPoint.X * secondPolygonPoint.X + firstPolygonPoint.Y * secondPolygonPoint.Y;
+            double Alpha = Math.Acos(scalar / (aV * bV));
+            return Alpha;
+        }
+
 
 
     }

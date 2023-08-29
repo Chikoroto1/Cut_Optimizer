@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\source\\repos\\Cut Optimizer\\Cut Optimizer\\Cut Optimizer.csproj": {}
+    "D:\\Rabota\\GitHub\\Cut_Optimizer\\Cut Optimizer\\Cut Optimizer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\source\\repos\\Cut Optimizer\\Cut Optimizer\\Cut Optimizer.csproj": {
+    "D:\\Rabota\\GitHub\\Cut_Optimizer\\Cut Optimizer\\Cut Optimizer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\Cut Optimizer\\Cut Optimizer\\Cut Optimizer.csproj",
+        "projectUniqueName": "D:\\Rabota\\GitHub\\Cut_Optimizer\\Cut Optimizer\\Cut Optimizer.csproj",
         "projectName": "Cut Optimizer",
-        "projectPath": "C:\\Users\\User\\source\\repos\\Cut Optimizer\\Cut Optimizer\\Cut Optimizer.csproj",
+        "projectPath": "D:\\Rabota\\GitHub\\Cut_Optimizer\\Cut Optimizer\\Cut Optimizer.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\Cut Optimizer\\Cut Optimizer\\obj\\",
+        "outputPath": "D:\\Rabota\\GitHub\\Cut_Optimizer\\Cut Optimizer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
