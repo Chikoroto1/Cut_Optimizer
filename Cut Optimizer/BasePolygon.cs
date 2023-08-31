@@ -20,7 +20,24 @@ namespace Cut_Optimizer
 
             }
         }
+        private void createAnArrangement()
+        { 
+
+        }
+        private bool lokingForIntersection(PolygonPoint firstSegmentFirstPoint, PolygonPoint firstSegmentSecondPoint, PolygonPoint secondSegmentFirstPoint, PolygonPoint secontSegmentSecontPoint)
+        {
+            
+            double tanAlpha1 = (firstSegmentSecondPoint.Y - firstSegmentFirstPoint.Y) / (firstSegmentSecondPoint.X - firstSegmentFirstPoint.X);
+            double tanAlpha2 = (secontSegmentSecontPoint.Y - secondSegmentFirstPoint.Y) / (secontSegmentSecontPoint.X - secondSegmentFirstPoint.X); ;
+            double sum = tanAlpha1 - tanAlpha2;
+            if (sum == 0)
+            {
+                return false;
+            }
+            return true;
+        }
         
+
     }
     public struct PolygonPoint
     {
