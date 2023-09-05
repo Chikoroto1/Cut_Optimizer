@@ -32,3 +32,12 @@ D:\Rabota\GitHub\Cut_Optimizer\Cut Optimizer\obj\Debug\net6.0-windows\refint\Cut
 D:\Rabota\GitHub\Cut_Optimizer\Cut Optimizer\obj\Debug\net6.0-windows\Cut Optimizer.pdb
 D:\Rabota\GitHub\Cut_Optimizer\Cut Optimizer\obj\Debug\net6.0-windows\Cut Optimizer.genruntimeconfig.cache
 D:\Rabota\GitHub\Cut_Optimizer\Cut Optimizer\obj\Debug\net6.0-windows\ref\Cut Optimizer.dll
+C:\Users\User\Documents\GitHub\Cut_Optimizer\Cut Optimizer\obj\Debug\net6.0-windows\Cut_Optimizer.Form1.resources
+C:\Users\User\Documents\GitHub\Cut_Optimizer\Cut Optimizer\obj\Debug\net6.0-windows\Cut Optimizer.csproj.GenerateResource.cache
+C:\Users\User\Documents\GitHub\Cut_Optimizer\Cut Optimizer\obj\Debug\net6.0-windows\Cut Optimizer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\GitHub\Cut_Optimizer\Cut Optimizer\obj\Debug\net6.0-windows\Cut Optimizer.AssemblyInfoInputs.cache
+C:\Users\User\Documents\GitHub\Cut_Optimizer\Cut Optimizer\obj\Debug\net6.0-windows\Cut Optimizer.AssemblyInfo.cs
+C:\Users\User\Documents\GitHub\Cut_Optimizer\Cut Optimizer\obj\Debug\net6.0-windows\Cut Optimizer.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\GitHub\Cut_Optimizer\Cut Optimizer\obj\Debug\net6.0-windows\Cut Optimizer.dll
+C:\Users\User\Documents\GitHub\Cut_Optimizer\Cut Optimizer\obj\Debug\net6.0-windows\refint\Cut Optimizer.dll
+C:\Users\User\Documents\GitHub\Cut_Optimizer\Cut Optimizer\obj\Debug\net6.0-windows\Cut Optimizer.pdb
