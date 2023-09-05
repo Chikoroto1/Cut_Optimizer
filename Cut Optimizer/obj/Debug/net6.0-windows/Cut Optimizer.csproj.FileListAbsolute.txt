@@ -15,3 +15,20 @@ C:\Users\User\source\repos\Cut Optimizer\Cut Optimizer\obj\Debug\net6.0-windows\
 C:\Users\User\source\repos\Cut Optimizer\Cut Optimizer\obj\Debug\net6.0-windows\Cut Optimizer.pdb
 C:\Users\User\source\repos\Cut Optimizer\Cut Optimizer\obj\Debug\net6.0-windows\Cut Optimizer.genruntimeconfig.cache
 C:\Users\User\source\repos\Cut Optimizer\Cut Optimizer\obj\Debug\net6.0-windows\ref\Cut Optimizer.dll
+D:\Rabota\GitHub\Cut_Optimizer\Cut Optimizer\bin\Debug\net6.0-windows\Cut Optimizer.exe
+D:\Rabota\GitHub\Cut_Optimizer\Cut Optimizer\bin\Debug\net6.0-windows\Cut Optimizer.deps.json
+D:\Rabota\GitHub\Cut_Optimizer\Cut Optimizer\bin\Debug\net6.0-windows\Cut Optimizer.runtimeconfig.json
+D:\Rabota\GitHub\Cut_Optimizer\Cut Optimizer\bin\Debug\net6.0-windows\Cut Optimizer.dll
+D:\Rabota\GitHub\Cut_Optimizer\Cut Optimizer\bin\Debug\net6.0-windows\Cut Optimizer.pdb
+D:\Rabota\GitHub\Cut_Optimizer\Cut Optimizer\obj\Debug\net6.0-windows\Cut Optimizer.csproj.AssemblyReference.cache
+D:\Rabota\GitHub\Cut_Optimizer\Cut Optimizer\obj\Debug\net6.0-windows\Cut_Optimizer.Form1.resources
+D:\Rabota\GitHub\Cut_Optimizer\Cut Optimizer\obj\Debug\net6.0-windows\Cut Optimizer.csproj.GenerateResource.cache
+D:\Rabota\GitHub\Cut_Optimizer\Cut Optimizer\obj\Debug\net6.0-windows\Cut Optimizer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Rabota\GitHub\Cut_Optimizer\Cut Optimizer\obj\Debug\net6.0-windows\Cut Optimizer.AssemblyInfoInputs.cache
+D:\Rabota\GitHub\Cut_Optimizer\Cut Optimizer\obj\Debug\net6.0-windows\Cut Optimizer.AssemblyInfo.cs
+D:\Rabota\GitHub\Cut_Optimizer\Cut Optimizer\obj\Debug\net6.0-windows\Cut Optimizer.csproj.CoreCompileInputs.cache
+D:\Rabota\GitHub\Cut_Optimizer\Cut Optimizer\obj\Debug\net6.0-windows\Cut Optimizer.dll
+D:\Rabota\GitHub\Cut_Optimizer\Cut Optimizer\obj\Debug\net6.0-windows\refint\Cut Optimizer.dll
+D:\Rabota\GitHub\Cut_Optimizer\Cut Optimizer\obj\Debug\net6.0-windows\Cut Optimizer.pdb
+D:\Rabota\GitHub\Cut_Optimizer\Cut Optimizer\obj\Debug\net6.0-windows\Cut Optimizer.genruntimeconfig.cache
+D:\Rabota\GitHub\Cut_Optimizer\Cut Optimizer\obj\Debug\net6.0-windows\ref\Cut Optimizer.dll

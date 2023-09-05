@@ -9,8 +9,14 @@ namespace Cut_Optimizer
 
     public class PolygonEngine
     {
+        public Polygon SheetFormat { get { return this.sheetFormat; } }
+        
         private List<Polygon> polygons;
         private Polygon sheetFormat;
+        public PolygonEngine(Polygon sheetFormat) 
+        {
+            this.sheetFormat = sheetFormat;
+        }
         private void FS()
         {
             double lenghtA;
@@ -36,20 +42,42 @@ namespace Cut_Optimizer
             }
             return true;
         }
-        
+        public void AddPolygon(Polygon polygon)
+        {
+            this.polygons.Add(polygon);
+        }
 
     }
     public struct PolygonPoint
     {
         public double X { get; set; }
         public double Y { get; set; }
+        public PolygonPoint(double x, double y)
+        {
+            X = x;
+            Y = y;
+        }        
     }
     public class Polygon
     {
+        private int quantity;
         private List<PolygonPoint> points;
         private List<PolygonPoint> correctedPoints;
+        private Polygon boxPlygon;
         private PolygonPoint boxMinX, boxMinY, boxMaxX, boxMaxY;
         private PolygonPoint centerOfRotation;
+        private double area;
+        private double boxArea;
+
+        public double Area { get { return this.area; } }
+        public Polygon() 
+        {
+            quantity = 1;
+        }
+        public Polygon(int quantity)
+        {
+            this.quantity = quantity;
+        }
         public List<PolygonPoint> Points 
         { 
             get 
@@ -89,10 +117,11 @@ namespace Cut_Optimizer
                 double YP = point.Y - this.centerOfRotation.Y;
                 double R = Math.Sqrt(Math.Pow(XP, 2) + Math.Pow(YP, 2 - centerOfRotation.X));
                 double alpha = Math.Acos(XP / R);
-                PolygonPoint rotatedPoint = new PolygonPoint() {
-                    X = centerOfRotation.X + R / Math.Cos(alpha + angleOfRotationRAD),
-                    Y = centerOfRotation.Y + R / Math.Sin(alpha + angleOfRotationRAD)
-                };
+                
+                PolygonPoint rotatedPoint = new PolygonPoint(
+                    centerOfRotation.X + R / Math.Cos(alpha + angleOfRotationRAD),
+                    centerOfRotation.Y + R / Math.Sin(alpha + angleOfRotationRAD)
+                );                
                 correctedPoints.Add(rotatedPoint);
             }
             
@@ -139,14 +168,21 @@ namespace Cut_Optimizer
 
             return area;
         }
-        public double determinatePolygonArea() 
+        public double determinatePolygonArea(Polygon polygon) 
         {
-            double[,] doubles = new double[,] {
-                {0,   57.52922972 },
-                {83.55985646,  73.62245796 },
-                {91.41062703,  57.52922972 },
-                {27.5199921,  18.53104996 }
-            };
+            //double[,] doubles = new double[,] {
+            //    {0,   57.52922972 },
+            //    {83.55985646,  73.62245796 },
+            //    {91.41062703,  57.52922972 },
+            //    {27.5199921,  18.53104996 }
+            //};
+            double[,] doubles = new double[polygon.Points.Count, 2];
+            for (int i = 0; i < polygon.Points.Count; i++)
+            {
+                doubles[i, 0] = polygon.Points[i].X;
+                doubles[i, 1] = polygon.Points[i].Y;
+            }
+
             double determinant = 0;
             double area = 0;
             int lenght = doubles.GetLength(0);
@@ -179,6 +215,10 @@ namespace Cut_Optimizer
             //double rectangleLenght;
             //double rectangleWidht;
             //double rectangleArea;
+            if (boxPlygon == null)
+            {
+                boxPlygon = new Polygon();
+            }
             List<PolygonPoint> currentPoints;
             if (this.correctedPoints != null)
             {
@@ -192,9 +232,11 @@ namespace Cut_Optimizer
             this.boxMaxX = currentPoints.MaxBy(p => p.X);
             this.boxMinY = currentPoints.MinBy(p => p.Y);
             this.boxMaxY = currentPoints.MaxBy(p => p.Y);
-            
-
-
+            this.boxPlygon.AddPoint(this.boxMinX);
+            this.boxPlygon.AddPoint(this.boxMaxX);
+            this.boxPlygon.AddPoint(this.boxMinY);
+            this.boxPlygon.AddPoint(this.boxMaxY);
+            this.boxArea = determinatePolygonArea(boxPlygon);
         }
         private double internalAngle(PolygonPoint firstPolygonPoint, PolygonPoint secondPolygonPoint)
         {
