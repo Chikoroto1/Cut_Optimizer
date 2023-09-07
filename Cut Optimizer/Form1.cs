@@ -7,6 +7,8 @@ namespace Cut_Optimizer
         // Test props
         Polygon sheetFormat;
         Polygon partPolygon;
+        Polygon partPolygon2;
+        Polygon partPolygon3;
         private void createTestProps()
         {
             sheetFormat = new Polygon();
@@ -20,6 +22,18 @@ namespace Cut_Optimizer
             partPolygon.AddPoint(new PolygonPoint(25D, 0D));
             partPolygon.AddPoint(new PolygonPoint(25D, 17D));
             partPolygon.AddPoint(new PolygonPoint(0D, 17D));
+
+            partPolygon2 = new Polygon();
+            partPolygon2.AddPoint(new PolygonPoint(0D, 0D));
+            partPolygon2.AddPoint(new PolygonPoint(35D, 0D));
+            partPolygon2.AddPoint(new PolygonPoint(35D, 17D));
+            partPolygon2.AddPoint(new PolygonPoint(0D, 17D));
+
+            partPolygon3 = new Polygon();
+            partPolygon3.AddPoint(new PolygonPoint(0D, 0D));
+            partPolygon3.AddPoint(new PolygonPoint(15D, 0D));
+            partPolygon3.AddPoint(new PolygonPoint(15D, 17D));
+            partPolygon3.AddPoint(new PolygonPoint(0D, 17D));
         }
         //
         Graphics graphics;
@@ -33,7 +47,14 @@ namespace Cut_Optimizer
         private void button1_Click(object sender, EventArgs e)
         {
             Polygon polygon = new Polygon();
-            MessageBox.Show(polygon.determinatePolygonArea().ToString()); 
+            sheetFormat.RotatePoints(new PolygonPoint(0, 250), Math.PI / 2 * 3);
+            PolygonEngine polygonEngine = new PolygonEngine(sheetFormat);
+            
+            polygonEngine.AddPolygon(partPolygon);
+            polygonEngine.AddPolygon(partPolygon2);
+            polygonEngine.AddPolygon(partPolygon3);
+            polygonEngine.FitToSheet();
+            //MessageBox.Show(polygon.determinatePolygonArea().ToString()); 
         }
         private void updateDisplay()
         {   
